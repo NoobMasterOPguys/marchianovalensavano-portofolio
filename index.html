@@ -3,169 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio - Marchiano Valen Savano</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="theme-color" content="#100b0c" />
+  <meta name="description" content="CV dan portofolio Marchiano Valen Savano, pelajar Rekayasa Perangkat Lunak di SMKN 20 Jakarta." />
+  <title>Marchiano Valen Savano — CV & Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Login Page -->
-  <div id="loginPage" class="min-h-screen flex items-center justify-center">
-    <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-6">
-      <h1 class="text-2xl font-bold mb-2">Masuk ke CV</h1>
-      <form id="loginForm">
-        <label class="block mb-2">
-          <span class="text-sm font-medium">Username</span>
-          <input id="username" class="mt-1 block w-full rounded-md border-gray-200 shadow-sm p-2" placeholder="nama panggilan" />
-        </label>
-        <label class="block mb-4">
-          <span class="text-sm font-medium">Password</span>
-          <input id="password" type="password" class="mt-1 block w-full rounded-md border-gray-200 shadow-sm p-2" placeholder="password" />
-        </label>
-        <p id="errorMsg" class="text-red-500 mb-2 hidden">Username atau password salah</p>
-        <button type="submit" class="w-full py-2 rounded-md bg-indigo-600 text-white font-medium">Masuk</button>
-      </form>
-      <div class="mt-4 text-xs text-gray-500">
-        <p><strong>Username:</strong> Valen</p>
-        <p><strong>Password:</strong> 12345</p>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Navigasi utama">
+      <a class="brand" href="#home" aria-label="Marchiano Valen Savano, beranda">
+        <span class="brand-mark" aria-hidden="true">MV</span>
+        <span class="brand-name">MARCHIANO VALEN SAVANO</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Buka navigasi">
+        <span></span><span></span>
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <a href="#tentang">Tentang</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#pengalaman">Pengalaman</a>
+        <a href="#pendidikan">Pendidikan</a>
+        <a class="nav-contact" href="#kontak">Hubungi Saya <span aria-hidden="true">↗</span></a>
       </div>
-    </div>
-  </div>
+    </nav>
+  </header>
 
-  <!-- Portfolio Page -->
-  <div id="portfolioPage" class="hidden min-h-screen">
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-      <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-md bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white font-bold">MV</div>
-          <div>
-            <h2 class="text-lg font-semibold">CV — Marchiano Valen Savano</h2>
-            <p class="text-xs text-gray-500">Curriculum Vitae</p>
+  <main id="main">
+    <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Personal portfolio <span class="eyebrow-dot"></span> Jakarta</p>
+        <h1 id="hero-title">Marchiano<br /><em>Valen Savano</em></h1>
+        <p class="hero-role">Pelajar RPL <span aria-hidden="true">·</span> Web Development &amp; English Communication</p>
+        <p class="hero-intro">Murid SMKN 20 Jakarta yang tertarik pada teknologi, senang berinteraksi, dan terus mengembangkan kemampuan bahasa Inggris.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#tentang">Jelajahi CV <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#kontak">Hubungi Saya <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-note"><span class="note-rule"></span><span>Rekayasa Perangkat Lunak<br />SMKN 20 Jakarta</span></div>
+      </div>
+      <div class="hero-art reveal" aria-label="Potret Marchiano Valen Savano">
+        <div class="portrait-halo" aria-hidden="true"></div>
+        <div class="portrait-frame">
+          <span class="portrait-index" aria-hidden="true">01 — PROFILE</span>
+          <div class="portrait-image-wrap">
+            <span class="portrait-fallback" aria-hidden="true">MV</span>
+            <img class="portrait-image" src="valen.jpeg" alt="Potret Marchiano Valen Savano" />
           </div>
+          <span class="portrait-caption">MARCHIANO VALEN SAVANO <span>·</span> JAKARTA</span>
         </div>
-        <div class="flex items-center gap-4">
-          <span class="text-sm text-gray-600">Halo, <strong id="userDisplay">Valen</strong></span>
-          <button id="logoutBtn" class="text-sm px-3 py-1 rounded-md border">Keluar</button>
-        </div>
+        <span class="hero-monogram" aria-hidden="true">M<span>V</span></span>
       </div>
-    </header>
-
-    <!-- Hero -->
-    <section class="mt-8 bg-white rounded-2xl p-6 shadow-sm max-w-6xl mx-auto">
-      <div class="md:flex md:items-center md:gap-6">
-        <img src="valen.jpeg" alt="Foto Valen" class="w-28 h-28 rounded-full object-cover border" />
-        <div class="mt-4 md:mt-0">
-          <h1 class="text-3xl font-bold">Marchiano Valen Savano</h1>
-          <p class="text-gray-600 mt-1">Murid SMKN 20 Jakarta</p>
-        </div>
-      </div>
+      <a class="scroll-cue" href="#tentang"><span class="scroll-line"></span> Gulir untuk mengenal</a>
     </section>
 
-    <!-- About -->
-    <section class="mt-6 max-w-6xl mx-auto">
-      <div class="bg-white rounded-2xl p-6 shadow-sm">
-        <h3 class="text-xl font-semibold">Tentang</h3>
-        <p class="text-gray-600 mt-2">Saya suka berinteraksi dan bergaul bersama teman, kalem, dan saya juga bijaksana. Minat saya adalah bahasa Inggris dari berkomunikasi dengan teman sampai saya mampu menvisualkan bagaimana bahasa inggris itu bahasa yang krusial dalam kehidupan sehari-hari. Saat ini, saya masih menjadi murid SMKN 20 Jakarta.</p>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="mt-6 max-w-6xl mx-auto">
-      <div class="bg-white rounded-2xl p-6 shadow-sm">
-        <h3 class="text-xl font-semibold">Keahlian</h3>
-        <div class="mt-3 flex flex-wrap gap-2">
-          <span class="px-3 py-1 rounded-full border text-sm">HTML</span>
-          <span class="px-3 py-1 rounded-full border text-sm">CSS (Tailwind)</span>
-          <span class="px-3 py-1 rounded-full border text-sm">JavaScript</span>
-          <span class="px-3 py-1 rounded-full border text-sm">React (basic)</span>
-          <span class="px-3 py-1 rounded-full border text-sm">Bahasa Inggris</span>
+    <section class="about section-wrap section-grid" id="tentang" aria-labelledby="about-title">
+      <div class="section-label reveal"><span>01</span><span class="label-rule"></span><span>Tentang saya</span></div>
+      <div class="about-content reveal">
+        <p class="kicker">Sedikit tentang saya</p>
+        <h2 id="about-title">Rasa ingin tahu,<br /><em>dibawa ke dalam karya.</em></h2>
+        <p class="about-text">Saya senang berinteraksi dan bergaul dengan teman. Saya dikenal kalem dan bijaksana. Minat saya pada bahasa Inggris tumbuh dari komunikasi sehari-hari hingga memahami peran pentingnya dalam kehidupan. Saat ini, saya bersekolah di SMKN 20 Jakarta dan terus mengembangkan kemampuan di bidang teknologi serta komunikasi.</p>
+        <div class="trait-list" aria-label="Minat dan karakter">
+          <span>Komunikasi</span><span>Teknologi</span><span>Bahasa Inggris</span>
         </div>
       </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="mt-6 max-w-6xl mx-auto">
-      <div class="bg-white rounded-2xl p-6 shadow-sm">
-        <h3 class="text-xl font-semibold">Pengalaman</h3>
-        <p class="text-sm text-gray-500">
-          - Menjadi anggota dari ekstrakulikuler taekwondo periode 2021-2022
-          <p class="text-sm text-gray-500">
-          - Mengikuti lomba-lomba yang berbahasa inggris
-          <p class="text-sm text-gray-500">
-          - Menjadi wakil ketua di ekstrakulikuler English Club
-          <p class="text-sm text-gray-500">
-          - Menjadi anggota Japanese Club periode 2024
-
-        </p>
-          </p>
-          </p>
-        </p>
+      <div class="about-aside reveal">
+        <span class="aside-ornament" aria-hidden="true">“</span>
+        <p>Belajar hal baru, satu percakapan dan satu baris kode pada satu waktu.</p>
+        <span class="aside-caption">CATATAN PERSONAL</span>
       </div>
     </section>
 
-    <!-- Education -->
-    <section class="mt-6 max-w-6xl mx-auto">
-      <div class="bg-white rounded-2xl p-6 shadow-sm">
-        <h3 class="text-xl font-semibold">Pendidikan</h3>
-        <ul class="mt-3 space-y-2 text-gray-700">
-          <li><strong>MI Mumtaza</strong> — 2015-2016</li>
-          <li><strong>SDN 01</strong> — 2017</li>
-          <li><strong>MI Ummul Qura</strong> — 2018-2020</li>
-          <li><strong>SMP El-Syifa</strong> — 2021-2023</li>
-          <li><strong>SMKN 20 Jakarta</strong> — 2024-2026</li>
-        </ul>
+    <section class="skills section-wrap" id="keahlian" aria-labelledby="skills-title">
+      <div class="section-heading reveal">
+        <div class="section-label"><span>02</span><span class="label-rule"></span><span>Keahlian</span></div>
+        <div class="heading-row"><h2 id="skills-title">Hal yang sedang<br /><em>saya kembangkan.</em></h2><p>Teknologi dan komunikasi, dalam proses belajar yang terus berjalan.</p></div>
       </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="mt-6 mb-12 max-w-6xl mx-auto">
-      <div class="bg-white rounded-2xl p-6 shadow-sm">
-        <h3 class="text-xl font-semibold">Kontak</h3>
-        <p class="text-gray-600 mt-2">Hubungi saya melalui WhatsApp atau Instagram di bawah ini:</p>
-        <div class="mt-4 flex flex-col md:flex-row gap-3">
-          <a class="px-4 py-2 border rounded-md" href="https://wa.me/6285183582532">WhatsApp: 085183582532</a>
-          <a class="px-4 py-2 border rounded-md" href="https://instagram.com/alzeich">Instagram: @alzeich</a>
+      <div class="skills-layout">
+        <div class="skill-group reveal">
+          <p class="group-title"><span>01</span> Web development</p>
+          <ul class="skill-list">
+            <li><span>HTML</span><span aria-hidden="true">↗</span></li>
+            <li><span>CSS <small>(Tailwind)</small></span><span aria-hidden="true">↗</span></li>
+            <li><span>JavaScript</span><span aria-hidden="true">↗</span></li>
+            <li><span>React <small>(basic)</small></span><span aria-hidden="true">↗</span></li>
+          </ul>
+        </div>
+        <div class="language-panel reveal">
+          <p class="group-title"><span>02</span> Komunikasi</p>
+          <div class="language-word">Bahasa<br /><em>Inggris</em></div>
+          <p class="language-caption">Minat pada komunikasi dan penggunaan bahasa Inggris dalam keseharian.</p>
+          <span class="language-mark" aria-hidden="true">EN</span>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center py-6 text-sm text-gray-500">
-      Dibuat oleh Marchiano Valen Savano — CV Web Programmer.
-    </footer>
-  </div>
+    <section class="experience section-wrap section-grid" id="pengalaman" aria-labelledby="experience-title">
+      <div class="section-label reveal"><span>03</span><span class="label-rule"></span><span>Pengalaman</span></div>
+      <div class="experience-main">
+        <div class="section-heading reveal"><p class="kicker">Kegiatan &amp; keterlibatan</p><h2 id="experience-title">Belajar di luar<br /><em>ruang kelas.</em></h2></div>
+        <ol class="timeline">
+          <li class="timeline-item reveal"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-meta"><span>Ekstrakurikuler</span><time>2021–2022</time></div><h3>Taekwondo</h3><p>Anggota ekstrakurikuler Taekwondo.</p></li>
+          <li class="timeline-item reveal"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-meta"><span>Kompetisi</span></div><h3>Lomba berbahasa Inggris</h3><p>Mengikuti lomba-lomba yang menggunakan bahasa Inggris.</p></li>
+          <li class="timeline-item reveal"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-meta"><span>Organisasi sekolah</span></div><h3>English Club</h3><p>Wakil ketua ekstrakurikuler English Club.</p></li>
+          <li class="timeline-item reveal"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-meta"><span>Klub sekolah</span><time>2024</time></div><h3>Japanese Club</h3><p>Anggota Japanese Club.</p></li>
+        </ol>
+      </div>
+    </section>
 
-  <script>
-    const loginForm = document.getElementById('loginForm');
-    const usernameInput = document.getElementById('username');
-    const passwordInput = document.getElementById('password');
-    const errorMsg = document.getElementById('errorMsg');
-    const loginPage = document.getElementById('loginPage');
-    const portfolioPage = document.getElementById('portfolioPage');
-    const userDisplay = document.getElementById('userDisplay');
-    const logoutBtn = document.getElementById('logoutBtn');
+    <section class="education section-wrap" id="pendidikan" aria-labelledby="education-title">
+      <div class="education-top reveal">
+        <div><div class="section-label"><span>04</span><span class="label-rule"></span><span>Pendidikan</span></div><h2 id="education-title">Jejak <em>pendidikan.</em></h2></div>
+        <p>Perjalanan belajar yang membentuk langkah saya hingga saat ini.</p>
+      </div>
+      <ol class="education-list">
+        <li class="education-item reveal"><span class="education-number">01</span><span class="school-name">MI Mumtaza</span><span class="school-year">2015–2016</span><span class="school-arrow" aria-hidden="true">↗</span></li>
+        <li class="education-item reveal"><span class="education-number">02</span><span class="school-name">SDN 01</span><span class="school-year">2017</span><span class="school-arrow" aria-hidden="true">↗</span></li>
+        <li class="education-item reveal"><span class="education-number">03</span><span class="school-name">MI Ummul Qura</span><span class="school-year">2018–2020</span><span class="school-arrow" aria-hidden="true">↗</span></li>
+        <li class="education-item reveal"><span class="education-number">04</span><span class="school-name">SMP El-Syifa</span><span class="school-year">2021–2023</span><span class="school-arrow" aria-hidden="true">↗</span></li>
+        <li class="education-item current reveal"><span class="education-number">05</span><span class="school-name">SMKN 20 Jakarta <small>Rekayasa Perangkat Lunak</small></span><span class="school-year">2024–2026</span><span class="school-arrow" aria-hidden="true">↗</span></li>
+      </ol>
+    </section>
 
-    const ADMIN_USERNAME = 'Valen';
-    const ADMIN_PASSWORD = '12345';
+    <section class="contact section-wrap" id="kontak" aria-labelledby="contact-title">
+      <div class="contact-topline reveal"><span>05 / KONTAK</span><span class="contact-line"></span><span>TERBUKA UNTUK TERHUBUNG</span></div>
+      <div class="contact-content reveal">
+        <p class="kicker">Mari berkenalan</p>
+        <h2 id="contact-title">Percakapan baik<br />bisa jadi <em>awal yang baik.</em></h2>
+        <p>Terbuka untuk berkenalan, berdiskusi, dan berkolaborasi.</p>
+      </div>
+      <div class="contact-links reveal">
+        <a class="contact-link" href="https://wa.me/6285183582532" target="_blank" rel="noopener noreferrer"><span class="contact-link-label">WHATSAPP</span><span class="contact-link-value">085183582532</span><span class="contact-link-arrow" aria-hidden="true">↗</span></a>
+        <a class="contact-link" href="https://instagram.com/alzeich" target="_blank" rel="noopener noreferrer"><span class="contact-link-label">INSTAGRAM</span><span class="contact-link-value">@alzeich</span><span class="contact-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
 
-    loginForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const u = usernameInput.value.trim();
-      const p = passwordInput.value;
-      if (u === ADMIN_USERNAME && p === ADMIN_PASSWORD) {
-        loginPage.classList.add('hidden');
-        portfolioPage.classList.remove('hidden');
-        userDisplay.textContent = u;
-      } else {
-        errorMsg.classList.remove('hidden');
-      }
-    });
-
-    logoutBtn.addEventListener('click', () => {
-      portfolioPage.classList.add('hidden');
-      loginPage.classList.remove('hidden');
-      usernameInput.value = '';
-      passwordInput.value = '';
-    });
-  </script>
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">MV</span><span>MARCHIANO VALEN SAVANO</span></a>
+    <p>© 2026 Marchiano Valen Savano</p>
+    <a class="back-top" href="#home">Kembali ke atas <span aria-hidden="true">↑</span></a>
+  </footer>
 </body>
 </html>
