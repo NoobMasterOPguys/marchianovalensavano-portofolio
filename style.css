@@ -160,7 +160,7 @@ h2 { font-family: var(--serif); font-size: clamp(40px, 5vw, 61px); font-weight: 
 .contact-content { position: relative; z-index: 1; padding: 67px 0 42px; }
 .contact-content h2 { margin-bottom: 17px; font-size: clamp(43px, 6vw, 70px); }
 .contact-content > p:last-child { margin-bottom: 0; color: var(--muted); font-size: 12px; }
-.contact-links { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 710px; }
+.contact-links { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 710px; }
 .contact-link { min-height: 75px; display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 12px 15px; border-top: 1px solid rgba(183, 138, 105, .5); transition: background .2s ease, padding .2s ease; }
 .contact-link:hover { padding-inline: 20px; background: rgba(109, 31, 53, .12); }
 .contact-link-label { grid-column: 1; color: var(--dim); font-size: 7px; }
