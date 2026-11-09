@@ -123,6 +123,26 @@ h2 { font-family: var(--serif); font-size: clamp(40px, 5vw, 61px); font-weight: 
 .language-word { position: relative; z-index: 1; margin-top: 34px; font-family: var(--serif); font-size: clamp(36px, 4vw, 52px); line-height: .87; }
 .language-caption { position: relative; z-index: 1; max-width: 230px; margin: 20px 0 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
 .language-mark { position: absolute; right: 17px; bottom: -36px; color: rgba(241, 231, 220, .035); font-family: var(--serif); font-size: 153px; line-height: 1; }
+.projects { padding-top: 85px; padding-bottom: 130px; border-top: 1px solid var(--line); }
+.project-list { display: grid; gap: 48px; margin-top: 48px; }
+.project-card { padding-top: 22px; border-top: 1px solid rgba(183, 138, 105, .35); }
+.project-gallery { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; gap: 14px; padding: 14px; background: linear-gradient(135deg, rgba(42, 28, 27, .78), rgba(23, 16, 17, .9)); }
+.eventflow-gallery { grid-template-columns: minmax(0, 1fr) minmax(150px, .34fr); }
+.project-shot { min-width: 0; margin: 0; overflow: hidden; border: 1px solid var(--line); background: #171011; }
+.project-shot a { display: block; overflow: hidden; }
+.project-shot img { display: block; width: 100%; max-height: 450px; height: auto; margin-inline: auto; object-fit: contain; transition: transform .35s ease; }
+.project-shot a:hover img { transform: scale(1.015); }
+.project-shot figcaption { padding: 9px 11px; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; letter-spacing: .5px; }
+.project-copy { padding: 25px 4px 0; }
+.project-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; color: var(--dim); font-size: 8px; font-weight: 600; letter-spacing: 1.5px; }
+.project-meta span { color: var(--brass); }
+.project-copy h3 { margin-bottom: 10px; font-family: var(--serif); font-size: 35px; font-weight: 500; line-height: 1.1; }
+.project-copy > p:not(.project-meta) { max-width: 780px; margin-bottom: 18px; color: var(--muted); font-size: 12px; line-height: 1.9; }
+.project-tech { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.project-tech li { padding: 5px 9px; border: 1px solid var(--line); color: var(--ivory); font-size: 9px; }
+.project-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 21px; color: var(--ivory); font-size: 10px; }
+.project-link span { color: var(--brass); transition: transform .2s ease; }
+.project-link:hover span { transform: translate(2px, -2px); }
 .experience { padding-top: 84px; padding-bottom: 148px; border-top: 1px solid var(--line); }
 .experience-main { grid-column: 2 / 4; }
 .experience-main .section-heading { display: block; }
@@ -200,6 +220,8 @@ h2 { font-family: var(--serif); font-size: clamp(40px, 5vw, 61px); font-weight: 
   .hero-monogram { right: -21px; font-size: 42px; }
   .section-grid { grid-template-columns: 1fr 2.25fr; gap: 28px; }
   .about-aside { grid-column: 2; max-width: 280px; margin-top: 19px; }
+  .projects { padding-top: 70px; padding-bottom: 100px; }
+  .eventflow-gallery { grid-template-columns: minmax(0, 1fr) minmax(120px, .36fr); }
   .experience-main { grid-column: 2; }
   .heading-row { align-items: flex-start; flex-direction: column; gap: 17px; }
   .heading-row > p { max-width: 360px; }
@@ -228,6 +250,14 @@ h2 { font-family: var(--serif); font-size: clamp(40px, 5vw, 61px); font-weight: 
   .about-content h2, .section-heading h2, .education-top h2 { font-size: 46px; }
   .about-aside { margin-left: 20px; }
   .skills { padding-top: 66px; padding-bottom: 100px; }
+  .projects { padding-top: 62px; padding-bottom: 88px; }
+  .project-list { gap: 38px; margin-top: 34px; }
+  .project-card { padding-top: 16px; }
+  .project-gallery { gap: 8px; padding: 8px; }
+  .eventflow-gallery { grid-template-columns: minmax(0, 1fr) minmax(80px, .42fr); }
+  .project-copy { padding-top: 20px; }
+  .project-copy h3 { font-size: 31px; }
+  .project-shot figcaption { padding: 7px; font-size: 8px; }
   .section-heading { display: block; }
   .skills-layout { grid-template-columns: 1fr; margin-top: 34px; }
   .skill-group { padding-inline: 18px; }
